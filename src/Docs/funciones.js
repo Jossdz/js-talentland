@@ -8,4 +8,4 @@ var comida = {
 }
 miDinero = 200
 
-miDinero = pagarComida(comida, presupuesto) // miDinero = 70
+miDinero = pagarComida(comida, miDinero) // miDinero = 70
