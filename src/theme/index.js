@@ -1,18 +1,23 @@
 import theme from 'mdx-deck/themes'
+import { underline } from 'ansi-colors';
 
 export default {
   ...theme,
-  font: 'ABeeZee, Roboto, sans-serif',
+  font: 'Roboto, sans-serif',
   h1: {
     textTransform: 'uppercase',
     fontWeight: 600,
-    color: '#3A3955'
+    font: 'Lato'
   },
   h2: {
-    color: '#3A3955'
+    
   },
   h3: {
-    color: '#3A3955'
+    margin: 0,
+    padding: 0
+  },
+  p: {
+    fontSize: '1.8rem',
   },
   monospace: '"Dank Mono", Josefin Sans, Sans Serif',
   img: {
@@ -21,15 +26,22 @@ export default {
   weights: 400,
   li: {
     paddingBottom: '20px',
+    fontSize: '3vw'
   },
   ul: {
     listStyle: 'none',
     paddingLeft: '20px',
     display: 'inline-block'
   },
+  strong:{
+    textDecoration: 'underline',
+  },
+  b:{
+    textDecoration: 'underline',
+  },
   colors: {
-    text: '#272A36',
-    background: 'white',
-    link: '#3A3955',
+    text: '#323330',
+    background: '#F8DA59',
+    link: '#DC97A1',
   }
 }

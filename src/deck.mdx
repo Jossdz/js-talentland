@@ -1,63 +1,281 @@
 
 import { Appear} from 'mdx-deck'
 import { CodeSurfer } from 'mdx-deck-code-surfer'
-import nightOwl from 'prism-react-renderer/themes/nightOwl'
+import jscode from './theme/jscode.js'
 
-import { Layout, Split } from './components'
+import { Layout, Split, Figure, GlobalStyle} from './components'
 
 export { default as theme } from './theme'
 
-
 <!-- Remove this code and replace with your slides-->
+<GlobalStyle whiteColor />
 
-# Welcome
+# Intro a JS
+
+<img src='https://i.postimg.cc/Dz5cnMwn/logo-ironhack-black.png' alt='ironhack' width='200px'/>
 
 ---
 export default Layout
 
-<div>
-  <h2>mdx-deck:</h2>
-  <Appear>
-  <p>📝 Write presentations in markdown</p>
-  <p> ✍ Auto import awesome fonts from google fonts</p>
-  <p>⚛️ Import and use React components</p>
-  <p>💅 Customizable themes and components</p>
-  <p>0️⃣ Zero-config CLI</p>
-  <p>💁 Presenter mode</p>
-  <p>📓 Speaker notes</p>
-</Appear>
-</div>
+José Carlos Correa
+### @Jossdz
+
+* Fullstack js 
+* Lead teacher en Ironhack México
+* Profesor del curso de Gatsby en Platzi
+---
+export default Layout
+
+## TL;DR
+
+JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.
 
 ---
 export default Split
 
-![](https://raw.githubusercontent.com/jxnblk/mdx-deck/master/docs/images/overview-mode.png)
+![js](http://www.purelogics.net/blog/wp-content/uploads/2019/01/javascript.png)
 
-## MDX 🤘🏼
+<p>
+  EL lenguaje de la web
+  <br/>
+  <br/>
+  y mucho más...
+</p>
+
+---
+export default Layout
+
+## Y al final del día es un lenguaje de **programación** versátil
+
+---
+export default Split
+
+¿Porqué aprender javascript?
+
+¿Por que Ironhack siempre elige JS?
+
+---
+export default Split
+
+<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2014/png/iconmonstr-rocket-17.png&r=0&g=0&b=0' alt='rocket' width='20%'/>
+
+```javascript
+Es de fácil acceso
+
+if(navegador && editor) ✔️
+```
+
+---
+export default Split
+
+Tiene una comunidad enorme y muy colaborativa,
+61k desarrolladores (aprox) según Stack Overflow
+
+<a href='https://insights.stackoverflow.com/survey/2019'><Figure width='80%' alt='stackoverflow' src='https://i.postimg.cc/Hn4xngHj/Captura-de-pantalla-2019-04-23-a-la-s-10-13-39.png'/></a>
+
+---
+export default Split
+
+<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-laptop-4.png&r=0&g=0&b=0' width='50%'/>
+
+Puedes programar backend o frontend con el mismo lenguaje
+
+<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-server-8.png&r=0&g=0&b=0' width='50%'/>
+
+---
+export default Split
+
+### Orientación a Objetos
+
+### Funcional
+
+### Reactivo
+
+### Asíncrono
 
 ---
 export default Layout
 
 <CodeSurfer
-  title="Powerfull code show"
-  notes="Show your code"
   code={require("!raw-loader!./Docs/my-snippet.js")}
   lang="jsx"
-  theme={nightOwl}
+  theme={jscode}
   showNumbers={false}
   dark={false}
   steps={[
-    {range:[3,6], notes: 'A range of,'},
-    {tokens:{1: [5]}, notes: 'an particular element'},
-    {lines: [1, 3], notes: 'or a couple lines'}
+    {lines: [1]},
+    {range:[2,5], notes: '¿Por qué no?'}
+  ]}
+/>
+
+---
+
+## Programando con js
+
+---
+export default Layout
+
+<CodeSurfer
+  title='variables - constantes'
+  notes='son las piezas fundamentales de la programación'
+  code={require('!raw-loader!./Docs/vars.js')}
+  lang="js"
+  theme={jscode}
+  dark={false}
+  steps={[
+    {tokens: {1: [0], 2: [1]}, notes: 'las variables se definen con el keyword: var o let'},
+    {tokens: {1: [1], 2: [2]}, notes: 'seguidas del nombre de la variable'},
+    {tokens: {1: [1], 2: [2,3,4,5,6]}, notes: 'pueden solo ser definidas o podemos asignar un valor'},
+    {tokens: {1: [1], 2: [2,3,4,5,6]}, notes: 'esto nos ayuda a almacenar datos en memoria'},
+    {tokens: {1: [1], 2: [2,3,4,5,6]}, notes: 'que podemos utilizar para resolver alguna problemática'},
+    {tokens: {3: [1]}, notes: 'y si queremos que un dato no cambie usamos el keyword const'},
+    {tokens: {3: [2,3,4,5,6,7]}, notes: 'al igual que una variable, seguido del nombre y valor'},
   ]}
 />
 
 ---
 export default Layout
 
-<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2014/png/iconmonstr-code-fork-2.png&r=127&g=218&b=202' alt='fork_logo' width='50px'/>
+<CodeSurfer
+  title='Tipos de datos'
+  notes='¿que podemos guardar en las variables/constantes?'
+  code={require('!raw-loader!./Docs/tipos.js')}
+  theme={jscode}
+  dark={false}
+  steps={[
+    {lines: [1], notes: 'Valores booleanos: verdadero/falso'},
+    {lines: [2], notes: 'Valores numéricos: verdadero/falso'},
+    {lines: [3], notes: 'Cadenas de téxto'},
+    {lines: [4], notes: 'Listas de elementos: pueden contener cualquier valor'},
+    {lines: [5], notes: 'Para acceder a un dato en una lista se ocupa la notación:'},
+    {lines: [5], notes: 'nombreDeLaLista[índice] (el índice comienza en 0)'},
+    {range: [6,9], notes: 'Objetos: pueden contener propiedades de cualquier tipo'},
+    {range: [10,11], notes: 'Para acceder a las propiedades de un objeto utilizamos:'},
+    {lines: [10], notes: 'la notación de punto: objeto.propiedad'},
+    {lines: [11], notes: `o la notación corchetes: objeto['propiedad']`},
+  ]}
+/>
 
-[Fork me on github!](https://github.com/Jossdz/MDXSlides)
+---
+export default Layout
 
-*with { ...♥︎ } by [jossdz](http://jossdz.com)*
+<CodeSurfer
+  title='Mostrar información en consola'
+  code={`
+    console.log(variable)
+  `}
+  lang="jsx"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {tokens:{2:[0,1,2,3,5]}, notes: 'Para mostrar algo en consola'},
+    {tokens:{2:[0,1,2,3,5]}, notes: 'podemos utilizar el objeto console y su método log'},
+    {tokens:{2:[4]}, notes: 'y entre parentesis pasamos la variable o el dato a mostrar'}
+  ]}
+/>
+---
+export default Layout
+
+<CodeSurfer
+  title='Operadores lógicos'
+  code={`
+    true  && true   // true
+    false && true   // false
+    false && false  // false
+    true  || true   // true
+    false || true   // true
+    false || false  // false
+  `}
+  lang="jsx"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
+/>
+
+---
+export default Layout
+
+<CodeSurfer
+  code={require("!raw-loader!./Docs/matematicos.js")}
+  lang="js"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
+  title='Operadores Matemáticos'
+  steps={[
+    {lines: [1], notes: 'adición'},
+    {lines: [2], notes: 'sustracción'},
+    {lines: [3], notes: 'multiplicación'},
+    {lines: [4], notes: 'módulo'},
+    {lines: [5], notes: 'división'},
+    {lines: [6], notes: 'exponencial'}
+  ]}
+/>
+
+---
+export default Layout
+
+<CodeSurfer
+  code={require("!raw-loader!./Docs/condicionales.js")}
+  lang="js"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
+  title='Estructuras condicionales'
+  steps={[
+    {range: [1, 5],notes: 'con ellas podemos comparar valores'},
+    {lines: [1], notes: '0 es igual a 0'},
+    {lines: [2], notes: '3 es mayor a 2'},
+    {lines: [3], notes: '5 es menor a 2'},
+    {lines: [4], notes: '3 es mayor o igual a 3'},
+    {lines: [5], notes: '4 es diferente a la letra "d"'},
+    {range: [7,13], notes: 'Usualmente las ocupamos en estructuras condicionales'},
+    {range: [7,8], notes: 'ejecutamos algo en caso de éxito'},
+    {range: [9,10], notes: 'ejecutamos otra cosa, con otra condición' },
+    {range: [11,13], notes: 'o ejecutamos algo en caso que ninguna se cumpla.'}
+  ]}
+/>
+
+---
+export default Layout
+
+
+<CodeSurfer
+  code={require("!raw-loader!./Docs/ciclos.js")}
+  lang="js"
+  theme={jscode}
+  showNumbers={true}
+  dark={false}
+  title='Ciclos'
+  steps={[
+    {notes: 'Nos ayudan con tareas repetitivas'},
+    {tokens: {1:[2,3,4,5,6]}, notes: 'el ciclo for utiliza un valor inicial,'},
+    {tokens: {1:[8,9,10,11]}, notes: 'una condición para saber cuando parar,'},
+    {tokens: {1:[13,14]}, notes: 'por último, un aumento (como va a crecer el índice).'},
+    {lines: [2], notes:'en su cuerpo ponemos la o las acciones a realizar'},
+    {range: [5,9], notes: 'while es un poco más confuso pero hace lo mismo.'}
+  ]}
+/>
+
+---
+export default Layout
+
+<CodeSurfer
+  code={require("!raw-loader!./Docs/funciones.js")}
+  lang="js"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
+  title='Funciones'
+  steps = {[
+    {notes: 'Pequeñas piezas de código que hacen algo en concreto'},
+    {range: [1,3], notes: 'Ésta es una función para pagar mi comida.'},
+    {tokens: {1:[2]}, notes: 'se llama pagarComida'},
+    {tokens: {1: [4,5,6]}, notes:'recibe dos datos(Parametros)'},
+    {tokens: {2: [2,3,4,5,6]}, notes:'y como resultado devuelve lo que me sobró'},
+    {range: [5,8], notes: 'Si compro un ramen, que cuesta 130'},
+    {tokens: {11: [4,5,6,7,8]}, notes: 'ejecuto mi función para pagarla con mis $200'},
+    {notes: 'lo cual me da como resultado '}
+  ]}
+/>

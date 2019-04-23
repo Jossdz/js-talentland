@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
+var javaScript = 'facil'
 
-export default ({prop}) => 
-  <Fragment>
-    <AnotherComponent prop={prop}/>
-  </Fragment>
+if(javaScript === 'facil'){
+  porQueNoAprenderlo()
+}

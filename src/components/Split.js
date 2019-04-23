@@ -51,8 +51,8 @@ const Split = ({ children }) => {
         ))}
       </Flex>
       <Footer>
-      <span><b>[Topic]</b></span>
-      <span>@name</span>
+      <span><b>Ironhack | JS</b></span>
+      <span>@jossdz</span>
     </Footer>
     </Root>
   )
