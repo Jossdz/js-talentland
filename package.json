@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "mdx-deck ./src/deck.mdx",
-    "build": "mdx-deck build --no-html ./src/deck.mdx"
+    "build": "mdx-deck build --no-html ./src/deck.mdx",
+    "now-build": "npm run build"
   },
   "dependencies": {
     "mdx-deck": "^1.7.7",
