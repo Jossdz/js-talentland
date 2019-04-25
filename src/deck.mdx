@@ -1,5 +1,5 @@
 
-import { Appear} from 'mdx-deck'
+import { Appear, Image, Head} from 'mdx-deck'
 import { CodeSurfer } from 'mdx-deck-code-surfer'
 import jscode from './theme/jscode.js'
 
@@ -7,7 +7,15 @@ import { Layout, Split, Figure, GlobalStyle} from './components'
 
 export { default as theme } from './theme'
 
-<!-- Remove this code and replace with your slides-->
+<Head>
+  <title>Intro a JS</title>
+  <meta name='twitter:card' content='summary_large_image'/>
+  <meta name='twitter:site' content='@jossdz'/>
+  <meta name='twitter:title' content='Intro a JS | Ironhack'/>
+  <meta name='twitter:description' content='Slides introducción a javascript y el estado del arte.'/>
+  <meta name='twitter:image' content='https://i.postimg.cc/JR7cMFqG/ironhack-miny.png'/>
+</Head>
+
 <GlobalStyle whiteColor />
 
 # Intro a JS
@@ -50,9 +58,7 @@ export default Layout
 ---
 export default Split
 
-¿Porqué aprender javascript?
-
-¿Por que Ironhack siempre elige JS?
+## ¿Porqué aprender javascript?
 
 ---
 export default Split
@@ -132,6 +138,10 @@ export default Layout
     {tokens: {3: [2,3,4,5,6,7]}, notes: 'al igual que una variable, seguido del nombre y valor'},
   ]}
 />
+---
+export default Layout
+
+<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2013/png/iconmonstr-shipping-box-8.png&r=0&g=0&b=0' width='60%'/>
 
 ---
 export default Layout
@@ -177,20 +187,12 @@ export default Layout
 ---
 export default Layout
 
-<CodeSurfer
-  title='Operadores lógicos'
-  code={`
-    true  && true   // true
-    false && true   // false
-    false && false  // false
-    true  || true   // true
-    false || true   // true
-    false || false  // false
-  `}
-  lang="jsx"
-  theme={jscode}
-  showNumbers={false}
-  dark={false}
+Muchas veces no tenemos guía visual hasta que mostramos algo en consola.
+
+<img
+  src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-eye-6.png&r=50&g=51&b=48'
+  width='15%'
+  alt='eye'
 />
 
 ---
@@ -211,6 +213,25 @@ export default Layout
     {lines: [5], notes: 'división'},
     {lines: [6], notes: 'exponencial'}
   ]}
+/>
+
+---
+export default Layout
+
+<CodeSurfer
+  title='Operadores lógicos'
+  code={`
+    true  && true   // true
+    false && true   // false
+    false && false  // false
+    true  || true   // true
+    false || true   // true
+    false || false  // false
+  `}
+  lang="jsx"
+  theme={jscode}
+  showNumbers={false}
+  dark={false}
 />
 
 ---
@@ -240,6 +261,14 @@ export default Layout
 ---
 export default Layout
 
+<Image 
+  src='https://m.media-amazon.com/images/M/MV5BMjM1OTg3MjQ2N15BMl5BanBnXkFtZTgwMDQwODQwNzM@._V1_SX1777_CR0,0,1777,999_AL_.jpg'
+  size='contain'
+/>
+
+---
+export default Layout
+
 
 <CodeSurfer
   code={require("!raw-loader!./Docs/ciclos.js")}
@@ -257,6 +286,10 @@ export default Layout
     {range: [5,9], notes: 'while es un poco más confuso pero hace lo mismo.'}
   ]}
 />
+---
+export default Layout
+
+<img src='https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2013/png/iconmonstr-infinity-5.png&r=50&g=51&b=48' width='80%'/>
 
 ---
 export default Layout
