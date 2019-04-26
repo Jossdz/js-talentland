@@ -8,4 +8,4 @@ var Teacher = {
   hobbies: ['tocar guitarra', 'Dibujar'],
 }
 // Teacher.nombre == 'joss'
-// Teacher['nombre] == 'joss'
+// Teacher['nombre'] == 'joss'
